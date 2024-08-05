@@ -35,3 +35,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: Upload Allure results
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-results
+        path: allure-results
+        retention-days: 1
